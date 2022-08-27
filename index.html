@@ -1,24 +1,45 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <p>Hello world!</p>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-        <div class="main-container">
-            <button type="button" id="share-game">share your game</button>
-            <button type="button" id="share-game-msstart">share game (msstart)</button>
+<body>
+
+    <div class="main-container">
+        <h1>Just image this is a really cool game!</h1>
+
+        <button type="button" id="share-game">share game</button>
+        <button type="button" id="share-game-msstart">share game (msstart)</button>
+
+        <div class="data-form">
+            <div class="data-form-control">
+                <label>url: <input type="text" id="url-control"></label>
+            </div>
+            <div class="data-form-control">
+                <label>text: <input type="text" id="text-control"></label>
+            </div>
+            <div class="data-form-control">
+                <label>title: <input type="text" id="title-control"></label>
+            </div>
+            <div class="data-form-control">
+                <label for="context-control">context:</label>
+                <div>
+                    <textarea id="context-control" rows="5" cols="33"></textarea>
+                </div>
+            </div>
         </div>
+    </div>
 
-        <script src="js/main.js" type="module"></script>
-    </body>
+    <script src="js/main.js" type="module"></script>
+</body>
+
 </html>

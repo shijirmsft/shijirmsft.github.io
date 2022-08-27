@@ -1,10 +1,11 @@
-#target {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    clip-path: ellipse(45% 45% at 50% 50%);
+.main-container {
+    padding: 12px;
 }
 
-#target:hover {
-    background-color: green;
+.data-form {
+    padding: 6px 0;
+}
+
+.data-form-control {
+    padding: 2px 0;
 }
