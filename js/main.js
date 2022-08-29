@@ -3,6 +3,7 @@ import { questions } from "./questions-inventory.js";
 
 const shareGameButton = document.querySelector("#share-game");
 const shareGameMSStartButton = document.querySelector("#share-game-msstart");
+const hijackNavShareButton = document.querySelector("#hijack-navigator-share"); 
 
 
 function getShareData () {
@@ -32,4 +33,15 @@ shareGameMSStartButton.addEventListener("click", (event) => {
         window["@msstart"].share(shareData);
     }
     console.log("Clicked on " + event.target.id, shareData);
+});
+
+
+hijackNavShareButton.addEventListener("click", (event) => {
+    alert("You've just hijacked native navigator share. This will happen only when MSSTART is enabled!");
+
+    const originalNavShare = window.navigator.share;
+
+    window.navigator.share = function(shareData) {
+        window.top.postMessage(JSON.stringify({action: "share", data: shareData}), "*");
+    }
 });
