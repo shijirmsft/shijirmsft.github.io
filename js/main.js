@@ -17,7 +17,7 @@ function getShareData () {
 shareGameButton.addEventListener("click", (event) => {
     const shareData = getShareData();
     navigator.share(shareData);
-    console.log("Clicked on " + event.target.id, getShareData());
+    console.log("Clicked on " + event.target.id, shareData);
 });
 
 
@@ -25,9 +25,11 @@ shareGameMSStartButton.addEventListener("click", (event) => {
     const shareData = getShareData();
 
     window.parent.postMessage(shareData, window.location.href);
-    
+
+    console.log("Post message", shareData)
+
     if(window["@msstart"] && window["@msstart"].share) {
         window["@msstart"].share(shareData);
     }
-    console.log("Clicked on " + event.target.id, getShareData());
+    console.log("Clicked on " + event.target.id, shareData);
 });
