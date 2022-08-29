@@ -23,5 +23,8 @@ shareGameButton.addEventListener("click", (event) => {
 
 shareGameMSStartButton.addEventListener("click", (event) => {
     const shareData = getShareData();
+    if(window["@msstart"] && window["@msstart"].share) {
+        window["@msstart"].share(shareData);
+    }
     console.log("Clicked on " + event.target.id, getShareData());
 });
