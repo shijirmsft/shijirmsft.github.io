@@ -37,7 +37,7 @@ shareGameMSStartButton.addEventListener("click", (event) => {
 
 
 hijackNavShareButton.addEventListener("click", (event) => {
-    console.warning("You've just hijacked native navigator share. This will happen only when MSSTART is enabled!");
+    console.log("You've just hijacked native navigator share. This will happen only when MSSTART is enabled!");
 
     const originalNavShare = window.navigator.share;
 
