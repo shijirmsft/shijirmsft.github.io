@@ -7,7 +7,7 @@ const hijackNavShareButton = document.querySelector("#hijack-navigator-share");
 
 
 function getShareData () {
-    const url = document.querySelector("#url-control").value;
+    const url = "https://shijirmsft.github.io/" // document.querySelector("#url-control").value;
     const text = document.querySelector("#text-control").value;
     const title = document.querySelector("#title-control").value;
     const context = document.querySelector("#context-control").value;
