@@ -12,7 +12,7 @@ function getShareData () {
     const title = document.querySelector("#title-control").value;
     const context = document.querySelector("#context-control").value;
 
-    return { url, text, title, context };
+    return { url };
 }
 
 shareGameButton.addEventListener("click", (event) => {
