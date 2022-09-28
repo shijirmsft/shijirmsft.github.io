@@ -16,10 +16,8 @@ function getShareData () {
 }
 
 shareGameButton.addEventListener("click", (event) => {
-    const shareData = getShareData();
-    console.log(shareData);
-    navigator.share(shareData);
-    console.log("Clicked on " + event.target.id, shareData);
+    console.log("Share game button clicked!");
+    navigator.share({url: "https://shijirmsft.github.io/"});
 });
 
 
